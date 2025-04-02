@@ -29,7 +29,7 @@ const NewsFeed = () => {
         )}
       </div>
 
-      {!data?.articles?.length && !isError && !isLoading ? (
+      {!isError && !isLoading ? (
         <button
           onClick={onLoadMoreHandler}
           type="button"
