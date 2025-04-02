@@ -33,13 +33,9 @@ function App() {
         return response.json();
       })
       .then((data) => setData(data))
-      .catch((err) => {
-        setIsError(true);
-        window.alert(`${err}`);
-      })
+      .catch(() => setIsError(true))
       .finally(() => {
         setIsLoading(false);
-        setIsError(false);
       });
   }, [pageSize]);
   return (
